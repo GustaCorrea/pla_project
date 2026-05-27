@@ -1,4 +1,5 @@
 const { somaMatrizes, subtracaoMatrizes, multiplicacaoEscalar } = require('./src/operacoesBasicas');
+const { multiplicaMatriz } = require('./src/produtoMatriz');
 
 // Definindo as matrizes de teste (Ordem 2x2)
 const matrizA = [
@@ -27,3 +28,9 @@ console.table(resultadoSubtracao);
 console.log(`\nResultado da multiplicao escalar (A * ${escalar})`);
 const resultadoEscalar = multiplicacaoEscalar(matrizA, escalar);
 console.table(resultadoEscalar);
+
+console.log("\nTeste produto de matrizes (A * B)");
+// Teste de Produto
+console.log("\nResultado do produto (A * B)");
+const resultadoProduto = multiplicaMatriz(matrizA, matrizB);
+console.table(resultadoProduto);
